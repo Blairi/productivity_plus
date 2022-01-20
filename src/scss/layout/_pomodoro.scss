@@ -1,0 +1,49 @@
+.pomodoro{
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+    background-color: $blue;
+    padding: 2.3rem;
+
+    button{
+        font-size: 3rem;
+    }
+
+    div{
+        display: grid;
+        place-items: center;
+        color: $white;
+        margin-bottom: 2rem;
+        @include tablet{
+            margin-bottom: 0;
+        }
+    }
+    .pomodoro-start{
+        background-color: $red;
+        min-height: 11.5rem;
+    }
+    .pomodoro-counter{
+        min-height: 11.5rem;
+        background-color: $pink;
+        font-weight: $black;
+    }
+    .pomodoro-state{
+        background-color: #4158D0;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        background-size: 400% 400%;
+        animation: move 10s ease-in-out infinite;
+        margin-top: 2rem;
+        height: 9rem;
+        @include tablet{
+            margin-top: 0;
+            height: auto;
+        }
+    }
+    @keyframes move{
+        0%{background-position: 0 50%;}
+        50%{background-position: 100% 50%;}
+        100%{background-position: 0 50%;}
+    }
+}

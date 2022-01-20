@@ -1,0 +1,12 @@
+.body-div{
+    margin-top: 12rem;
+    @include tablet{
+        margin-top: 15.7rem;
+
+    }
+    display: grid;
+    @include tablet{
+        grid-template-columns: 1fr 2fr;
+        gap: 1.3rem;
+    }
+}

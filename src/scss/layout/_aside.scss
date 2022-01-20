@@ -1,0 +1,21 @@
+aside{
+    background-color: $green;
+    color: $white;
+    padding: 1rem;
+    .text-phrase-container{
+        p{
+            margin-bottom: 0;
+        }
+        blockquote{
+            margin-top: 0;
+            font-size: 2rem;
+        }
+        .phrase-image{
+            max-height: 30rem;
+
+            @include tablet{
+                max-height: none;
+            }
+        }
+    }
+}

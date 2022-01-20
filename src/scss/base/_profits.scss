@@ -1,0 +1,40 @@
+.center-text{
+    text-align: center;
+}
+.title{
+    font-size: 3.4rem;
+    font-weight: $black;
+    margin: 0;
+}
+.hidden{
+    display: none!important;
+}
+.position-absolute{
+    position: absolute;
+}
+.position-relative{
+    position: relative;
+}
+.disabled{
+    background-color: rgba(#000000, 0.5);
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.alert{
+    padding: .4rem;
+    margin-top: 0.5rem;
+    p{
+        text-align: center;
+        margin: 0;
+        font-weight: $black;
+        background-color: unset!important;
+        font-size: 2rem;
+        line-height: 1.5;
+        color: $white;
+    }
+    &.error{
+        background-color: lighten($red, 7);
+    }
+}

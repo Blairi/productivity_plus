@@ -1,0 +1,36 @@
+.principal-footer{
+    margin-top: 3rem;
+    background-color: $gray;
+    padding: 2.5rem 0 0 0;
+    color: $white;
+
+    p{
+        padding: 3.5rem 0 3.5rem 0;
+        margin: 0;
+        background-color: darken($gray, 4);
+    }
+
+    .container{
+        display: block;
+        padding-bottom: 3rem;
+        @include tablet{
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            place-items: center;
+        }
+        h3{
+            font-weight: $black;
+            margin: 0;
+        }
+        a{
+            color: $white;
+            display: block;
+            margin: 2rem 0 2rem 0;
+            font-size: 2.3rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

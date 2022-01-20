@@ -1,0 +1,23 @@
+.btn-green-block{
+    @include boton($green, block);
+    width: 100%;
+}
+
+.btn-green{
+    @include boton($green, block);
+}
+
+.btn-orange{
+    @include boton($orange, block);
+}
+
+.btn-red-block{
+    @include boton($red, block);
+    width: 100%;
+}
+
+.btn-disabled{
+    @include boton(darken($white, 15), block);
+    filter: grayscale(2);
+    cursor: not-allowed!important;
+}
