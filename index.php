@@ -10,10 +10,6 @@ require "includes/config/database.php";
 $db = conectarDB();
 
 
-// echo "<pre>";
-// var_dump($consult);
-// echo "</pre>";
-
 // Execute the code when the user make some change
 if($_SERVER["REQUEST_METHOD"] === "POST"){
 
@@ -202,7 +198,7 @@ include "includes/templates/header.php";
                 <div class="text-phrase-container">
                     <p>La inteligencia consiste no sólo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica.</p>
                     <blockquote>- Aristóteles</blockquote>
-                    <img src="build/img/undraw_authentication_re_svpt.svg" alt="" id="phrase-image" class="phrase-image">
+                    <img src="build/img/undraw_advanced_customization_re_wo6h.svg" alt="" id="phrase-image" class="phrase-image">
                 </div>
             </div>
         </aside>

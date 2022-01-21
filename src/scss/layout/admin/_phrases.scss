@@ -1,0 +1,55 @@
+.header-phrase,
+.header-images{
+    margin-bottom: 3rem;
+}
+.control-panel-phrases{
+    display: block;
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .phrase{
+        padding: 2rem;
+        color: $white;
+        background-color: $green;
+        margin-bottom: 3rem;
+        @include tablet{
+            margin-bottom: 0;
+        }
+    }
+}
+.control-panel-images{
+    display: block;
+    margin-bottom: 3rem;
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .image{
+        margin-bottom: 3rem;
+        @include tablet{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.form-phrase{
+    padding-bottom: 30rem;
+    .btn-green-block{
+        font-size: 3rem;
+        padding: 3rem;
+    }
+    input:not([type="submit"]),
+    label,
+    textarea{
+        display: block;
+        font-size: 3rem;
+        margin: 2rem 0;
+        width: 100%;
+    }
+    textarea{
+        resize: none;
+    }
+}

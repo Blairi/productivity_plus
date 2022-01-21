@@ -1,0 +1,59 @@
+.admin{
+    h2{
+        padding: 2rem 0;
+        line-height: 1;
+    }
+    h3{
+        font-size: 3.5rem;
+    }
+    h4{
+        font-size: 3rem;
+        font-weight: $regular;
+        line-height: 1.5;
+    }
+    margin-bottom: 20rem;
+}
+.control-panel{
+    background-color: $blue_ligth;
+    padding: 3rem;
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .admin-phrases{
+        background-color: $pink;
+    }
+    .admin-users{
+        background-color: $green;
+    }
+    .admin-add{
+        background-color: $blue;
+    }
+    .admin-phrases,
+    .admin-users,
+    .admin-add{
+        transition: ease-in-out .3s;
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+
+    a{
+        display: block;
+        color: $white;
+        padding: 5rem;
+        margin-bottom: 3rem;
+        @include tablet{
+            padding: 15rem 3rem;
+            margin-bottom: 0;
+        }
+
+        h4{
+            font-size: 3rem;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}

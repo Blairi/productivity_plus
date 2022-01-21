@@ -12,6 +12,6 @@
         </div>
         <p class="center-text">Productivity + &copy; Todos los derechos reservados. 2022</p>
     </footer>
-    <script src="build/js/bundle.js"></script>
+    <script src="/build/js/bundle.js"></script>
 </body>
 </html>

@@ -38,3 +38,13 @@
         background-color: lighten($red, 7);
     }
 }
+.margin-top-bar{
+    margin-top: 12.8rem;
+}
+.center-section{
+    margin: 0 auto;
+    width: 90%;
+    @include tablet{
+        width: 40%;
+    }
+}
