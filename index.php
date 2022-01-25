@@ -8,6 +8,7 @@
 // Data base
 require "includes/config/database.php";
 $db = conectarDB();
+mysqli_query($db,"SET NAMES 'utf8'");
 
 
 // Execute the code when the user make some change
@@ -196,9 +197,30 @@ include "includes/templates/header.php";
                     <h3>Hola, Fernanda.<span class="emoji">💖</span></h3>
                 </div>
                 <div class="text-phrase-container">
-                    <p>La inteligencia consiste no sólo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica.</p>
-                    <blockquote>- Aristóteles</blockquote>
-                    <img src="build/img/undraw_advanced_customization_re_wo6h.svg" alt="" id="phrase-image" class="phrase-image">
+
+                    <!-- Phrase -->
+                    <?php
+
+                    // We select a random phrase with this sentence of sql
+                    $query = "SELECT * FROM phrase ORDER BY RAND()";
+                    $consult = mysqli_query($db, $query);
+                    $phrase = mysqli_fetch_assoc($consult);
+
+                    ?>
+                    <p><?php echo $phrase["phrase_content"]; ?></p>
+                    <blockquote>- <?php echo $phrase["autor"]; ?></blockquote>
+
+                    <!-- Image -->
+                    <?php
+
+                    // We select a random phrase with this sentence of sql
+                    $query = "SELECT * FROM images_phrase ORDER BY RAND()";
+                    $consult = mysqli_query($db, $query);
+                    $image = mysqli_fetch_assoc($consult);
+
+                    ?>
+                    <img src="images/<?php echo $image["images"]; ?>" alt="" id="phrase-image" class="phrase-image">
+
                 </div>
             </div>
         </aside>
