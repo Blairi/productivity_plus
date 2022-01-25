@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
-    <header class="principal-header hidden">
+    <header class="principal-header ">
         <div class="bar container center-text">
-            <h2>Productivity +</h2>
+            <a href="/"><h2>Productivity +</h2></a>
             <!-- <h1>Aumenta tu productividad y alcanza tus metas.</h1> -->
         </div>
     </header>

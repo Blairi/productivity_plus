@@ -1,7 +1,7 @@
 <footer class="principal-footer">
         <div class="container">
             <div class="center-text">
-                <h3>Productivity +</h3>
+                <a href="/"><h3>Productivity +</h3></a>
             </div>
             <div class="center-text">
                 <a href="">Inicio</a>

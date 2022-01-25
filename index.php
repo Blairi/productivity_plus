@@ -143,7 +143,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 //Eliminate the image prev if exists
 
                 if($task["image"] !== NULL){
-                    var_dump($dir_image . $task['image']);
+                    // var_dump($dir_image . $task['image']);
                     unlink($dir_image . $task['image']);
                 }
 
