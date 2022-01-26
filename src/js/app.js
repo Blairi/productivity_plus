@@ -1,11 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    dark_mode();
     add_task();
     edit_task();
     cancel_edit_task();
     pomodoro();
     validate_inputs();
 });
+
+
+const dark_mode = () => {
+    const system_dark_mode = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // console.log(prefiereDarkMode.matches);
+
+    if(system_dark_mode.matches) {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+
+    // if the user has changed the system preferences
+    system_dark_mode.addEventListener('change', function() {
+        if(system_dark_mode.matches) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+    });
+}
+
 
 const create_alert = (type, message, container) => {
     const div = document.createElement("DIV");

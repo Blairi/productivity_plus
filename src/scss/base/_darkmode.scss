@@ -1,0 +1,45 @@
+.dark-mode{
+    background-color: darken($gray, 4);
+
+    aside{
+        background-color: darken($green, 10);
+    }
+
+    .pomodoro{
+        background-color: darken($blue, 10);
+    }
+
+    .tasks{
+        background-color: darken($blue_ligth, 5);
+    }
+
+    .admin,
+    .header-phrase,
+    .control-panel-container{
+        h2,
+        h3{
+            color: $white;
+        }
+
+    }
+
+    .form-phrase{
+        input:not([type="submit"]),
+        textarea{
+            color: $white;
+            background-color: $gray;
+        }
+    }
+
+    .popup{
+        background-color: darken($gray, 4);
+        input:not([type="submit"]){
+            color: $white;
+            background-color: $gray;
+        }
+        h3,
+        label{
+            color: $white;
+        }
+    }
+}

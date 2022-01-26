@@ -20,6 +20,11 @@
         display: grid;
         gap: 1rem;
         grid-template-columns: 1fr;
+
+        @include phone{
+            grid-template-columns: 1fr 1fr;
+        }
+
         @include tablet{
             grid-template-columns: 1fr 1fr 1fr;
         }
