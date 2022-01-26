@@ -1,11 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     dark_mode();
-    add_task();
-    edit_task();
-    cancel_edit_task();
-    pomodoro();
-    validate_inputs();
+    
+    if(location.href === "http://localhost/"){
+        add_task();
+        edit_task();
+        cancel_edit_task();
+        pomodoro();
+        validate_inputs();
+    }
+
 });
 
 
