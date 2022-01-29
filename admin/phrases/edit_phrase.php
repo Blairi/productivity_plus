@@ -1,4 +1,12 @@
 <?php
+require "../../includes/functions.php";
+$auth = user_authenticated();
+$auth_admin = admin_authenticated();
+
+if(!$auth_admin || !$auth){
+    header("Location: /");
+}
+
 // Data base
 require "../../includes/config/database.php";
 $db = conectarDB();

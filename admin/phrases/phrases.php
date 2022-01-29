@@ -4,7 +4,13 @@ require "../../includes/config/database.php";
 $db = conectarDB();
 mysqli_query($db,"SET NAMES 'utf8'");
 
+require "../../includes/functions.php";
+$auth = user_authenticated();
+$auth_admin = admin_authenticated();
 
+if(!$auth_admin || !$auth){
+    header("Location: /");
+}
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     // echo "<pre>";
@@ -80,9 +86,17 @@ include "../../includes/templates/header.php";
                 
                 $consult = mysqli_query($db, $query);
 
-                while($phrase = mysqli_fetch_assoc($consult)): ?>
+                while($phrase = mysqli_fetch_assoc($consult)): 
+                    
+                    // Get the username of admin
+                    $query = "SELECT username FROM admin WHERE id = '${phrase["adminId"]}';";
+                    $consult_admin = mysqli_query($db, $query);
+                    $admin = mysqli_fetch_assoc($consult_admin);
+                
+                ?>
 
                 <div class="phrase">
+                    <p>Agregada por: <?php echo $admin["username"]; ?></p>
                     <p><?php echo $phrase["phrase_content"]; ?></p>
                     <blockquote>- <?php echo $phrase["autor"]; ?></blockquote>
                     <div class="controls">
@@ -112,10 +126,18 @@ include "../../includes/templates/header.php";
         
         $consult = mysqli_query($db, $query);
 
-        while($image = mysqli_fetch_assoc($consult)): ?>
+        while($image = mysqli_fetch_assoc($consult)):
+
+        // Get the username of admin
+        $query = "SELECT username FROM admin WHERE id = '${image["adminId"]}';";
+        $consult_admin = mysqli_query($db, $query);
+        $admin = mysqli_fetch_assoc($consult_admin);
+        
+        ?>
 
 
         <div class="image">
+            <p>Agregada por: <?php echo $admin["username"]; ?></p>
             <img src="../../images/<?php echo $image["images"]; ?>" alt="">
             <form action="" method="POST">
                 <input type="hidden" name="id" value="<?php echo $image["id"]; ?>">

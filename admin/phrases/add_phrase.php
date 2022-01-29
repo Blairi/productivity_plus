@@ -1,4 +1,15 @@
 <?php
+require "../../includes/functions.php";
+$auth = user_authenticated();
+$auth_admin = admin_authenticated();
+
+if(!$auth_admin || !$auth){
+    header("Location: /");
+}
+
+$session_id = $_SESSION["id"];
+
+
 // Data base
 require "../../includes/config/database.php";
 $db = conectarDB();
@@ -19,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     // Commit the query
     
     if(!strlen($phrase) < 10 || !strlen($autor) < 4){
-        $query = "INSERT INTO phrase (phrase_content, autor, adminId) VALUES ('$phrase', '$autor', '1');";
+        $query = "INSERT INTO phrase (phrase_content, autor, adminId) VALUES ('$phrase', '$autor', '$session_id');";
 
         $consult = mysqli_query($db, $query);
         header("Location: phrases.php");

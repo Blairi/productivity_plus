@@ -31,6 +31,8 @@
         gap: 1rem;
     }
     .image{
+        background-color: $white;
+        padding: 2rem;
         margin-bottom: 3rem;
         @include tablet{
             margin-bottom: 0;

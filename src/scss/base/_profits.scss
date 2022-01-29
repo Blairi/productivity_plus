@@ -37,6 +37,9 @@
     &.error{
         background-color: lighten($red, 7);
     }
+    &.exit{
+        background-color: lighten($green, 7);
+    }
 }
 .margin-top-bar{
     margin-top: 12.8rem;

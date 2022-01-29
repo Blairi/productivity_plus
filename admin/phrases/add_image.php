@@ -1,4 +1,14 @@
 <?php
+require "../../includes/functions.php";
+$auth = user_authenticated();
+$auth_admin = admin_authenticated();
+
+if(!$auth_admin || !$auth){
+    header("Location: /");
+}
+
+$session_id = $_SESSION["id"];
+
 // Data base
 require "../../includes/config/database.php";
 $db = conectarDB();
@@ -35,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     else{
         $image_name = md5(uniqid(rand(), true)) . ".png";
-        $query = "INSERT INTO images_phrase (images, adminId) VALUES ('$image_name', 1);";
+        $query = "INSERT INTO images_phrase (images, adminId) VALUES ('$image_name', '$session_id');";
         // Upload the image
         move_uploaded_file($image['tmp_name'], $dir_image . $image_name);
         
