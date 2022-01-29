@@ -15,7 +15,8 @@
 
     .admin,
     .header-phrase,
-    .control-panel-container{
+    .control-panel-container,
+    .header-images{
         h2,
         h3{
             color: $white;
@@ -39,6 +40,22 @@
         }
         h3,
         label{
+            color: $white;
+        }
+    }
+    .form-phrase{
+        label{
+            color: $white;
+        }
+    }
+    .image{
+        background-color: $gray;
+        p{
+            color: $white;
+        }
+    }
+    .margin-top-bar{
+        h2{
             color: $white;
         }
     }

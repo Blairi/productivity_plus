@@ -1,5 +1,8 @@
 html {
     font-size: 62.5%;
+    @include tablet{
+        font-size: 40.5%;
+    }
     box-sizing: border-box;
 }
 

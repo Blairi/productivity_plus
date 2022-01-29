@@ -95,7 +95,7 @@ include "includes/templates/header.php";
 
 
 <main class="margin-top-bar">
-    <header class="">
+    <header class="header-phrase">
         <h2 class="center-text">Iniciar sesión</h2>
         <?php if(isset($_GET["alert"]) && $_GET["alert"] === "sucesfully"): ?>
 

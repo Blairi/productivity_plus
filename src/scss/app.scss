@@ -5,7 +5,7 @@
 @import "base/globals";
 @import "base/profits";
 @import "base/botons";
-@import "base/darkmode";
+
 
 // Layout
 @import "layout/layout";
@@ -21,3 +21,7 @@
 // Admin
 @import "layout/admin/main";
 @import "layout/admin/phrases";
+
+
+// Dark-mode
+@import "base/darkmode";
