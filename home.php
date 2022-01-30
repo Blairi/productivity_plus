@@ -208,7 +208,7 @@ include "includes/templates/header.php";
     <div class="body-div container">
         <aside>
             <div class="container phrase-container">
-                <div class="user">
+                <div class="greet_user">
                     <h3>Hola, <?php echo $_SESSION['username']; ?>.<span class="emoji">💖</span></h3>
                 </div>
                 <div class="text-phrase-container">

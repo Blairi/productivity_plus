@@ -74,7 +74,7 @@ include "../includes/templates/header.php";
 <main class="margin-top-bar">
     <header class="header-phrase container">
         <h2 class="center-text">Agregar Administrador</h2>
-        <a href="index.php" class="btn-orange center-section">Volver</a>
+        <a href="/admin/" class="btn-orange center-section">Volver</a>
     </header>
 
     <?php foreach($errors as $error): ?>

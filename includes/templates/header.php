@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
-    <header class="principal-header ">
+    <header class="principal-header">
         <div class="bar container center-text">
             <a href="/"><h2>Productivity +</h2></a>
             <?php if($auth): ?>

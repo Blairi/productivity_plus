@@ -24,7 +24,7 @@ include "../includes/templates/header.php";
                 <a href="phrases/phrases.php" class="admin-phrases">
                     <h4>Frases e Imagenes</h4>
                 </a>
-                <a href="" class="admin-users">
+                <a href="users/users.php" class="admin-users">
                     <h4>Usuarios</h4>
                 </a>
                 <a href="add_admin.php" class="admin-add">

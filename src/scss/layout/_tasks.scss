@@ -16,27 +16,27 @@
     padding-top: 0.4rem;
     padding-bottom: 4rem;
 
-    .task-container{
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: 1fr;
-
-        @include phone{
-            grid-template-columns: 1fr 1fr;
-        }
-
-        @include tablet{
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        @include desktop{
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-    }
-
     h3{
         font-weight: $regular;
         margin-top: 2rem;
+    }
+}
+
+.task-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+
+    @include phone{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include tablet{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include desktop{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
@@ -47,6 +47,7 @@
     padding: 2rem;
     border-radius: 1.2rem;
     transition: ease-in-out 0.1s;
+    color: $white;
     p{
         margin: 0;
         padding: 0 1rem 0 1rem;
