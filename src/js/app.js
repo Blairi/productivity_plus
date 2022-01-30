@@ -1,13 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     dark_mode();
-<<<<<<< HEAD
 
     if(location.href === "http://localhost/home.php"){
-=======
-    
-    if(location.href === "http://localhost/"){
->>>>>>> 192f8fb462105d8d147184d28ad3e50b6f184883
         add_task();
         edit_task();
         cancel_edit_task();
