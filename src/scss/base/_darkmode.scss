@@ -1,4 +1,15 @@
 .dark-mode{
+
+    h1{
+        color: $white;
+    }
+
+    .section-info{
+        h2{
+            color: $white;
+        }
+    }
+
     background-color: darken($gray, 4);
 
     aside{
@@ -61,5 +72,21 @@
     }
     .user{
         background-color: darken($blue_ligth, 5);
+    }
+
+    .info-img,
+    .info-img-2{
+        p{
+            color: $white;
+        }
+    }
+
+    .background-pomodoro{
+        background-color: $gray;
+        h3,
+        p,
+        span{
+            color: $white;
+        }
     }
 }

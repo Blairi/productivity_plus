@@ -28,6 +28,5 @@
             <?php if($auth): ?>
                 <a href="/logout.php">Cerrar sesión. <?php echo $_SESSION['username'] ?></a>
             <?php endif; ?>
-            <!-- <h1>Aumenta tu productividad y alcanza tus metas.</h1> -->
         </div>
     </header>

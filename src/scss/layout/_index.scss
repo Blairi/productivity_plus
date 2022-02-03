@@ -1,0 +1,79 @@
+.hero{
+    display: grid;
+    place-items: center;
+    background-image: url(../../../build/img/windows-g6f7fafe26_1920.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 80rem;
+    background-attachment: fixed;
+
+    .controls{
+        margin-top: 3rem;
+        gap: 2rem;
+        @include tablet{
+
+            gap: 6rem;
+        }
+    }
+}
+
+.section-info{
+    padding: 4rem 0;
+}
+
+.info-img{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    @include tablet{
+        grid-template-columns: 1fr 2fr;
+    }
+    p{
+        font-size: 4rem;
+    }
+}
+.info-img-2{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    @include tablet{
+        grid-template-columns: 1fr 1fr;
+    }
+    p{
+        font-size: 4rem;
+    }
+}
+
+.background-login,
+.background-pomodoro{
+    display: grid;
+    place-items: center;
+    background-position: center center;
+    background-size: cover;
+    min-height: 40rem;
+    h3{
+        font-size: 4rem;
+    }
+    h3,
+    p{
+        color: $white;
+    }
+    .controls{
+        margin-top: 3rem;
+        gap: 2rem;
+        @include tablet{
+            gap: 4rem;
+        }
+    }
+}
+.background-login{
+    background-image: url(../../../build/img/mountain-g3c627bba8_1920.jpg);
+    background-attachment: fixed;
+}
+.background-pomodoro{
+    background-color: darken($white, 7);
+    h3,
+    p{
+        color: $dark;
+    }
+}

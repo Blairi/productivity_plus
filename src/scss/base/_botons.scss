@@ -26,3 +26,13 @@
     color: $white;
     padding: 3rem;
 }
+
+.btn-transparent{
+    @include boton($transparent, block);
+    color: $white;
+    border: $white .4rem solid;
+    transition: ease-in-out .3s;
+    &:hover{
+        background-color: $blue;
+    }
+}
