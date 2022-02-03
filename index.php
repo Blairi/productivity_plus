@@ -1,5 +1,11 @@
 <?php
+
+require "includes/functions.php";
+$auth = user_authenticated();
+$auth_admin = admin_authenticated();
+
 include "includes/templates/header.php";
+
 ?>
 
 
@@ -9,8 +15,34 @@ include "includes/templates/header.php";
         <div>
             <h1 class="center-text">Aumenta tu productividad y alcanza tus metas.</h1>
             <div class="controls container">
-                <a href="login.php" class="btn-transparent">Iniciar Sesíon</a>
+                <?php
+
+                if($auth && !$auth_admin):?>
+                    
+                <a href="home.php" class="btn-transparent">Mis tareas</a>
+                <a href="/logout.php" class="btn-transparent">Cerrar sesión.</a>
+
+                <?php endif; ?>
+
+
+                <?php
+
+                if($auth && $auth_admin):?>
+                    
+                <a href="admin/" class="btn-transparent">Administrar</a>
+                <a href="/logout.php" class="btn-transparent">Cerrar sesión.</a>
+
+                <?php endif; ?>
+
+                <?php
+
+                if(!$auth && !$auth_admin):?>
+
+                <a href="login.php" class="btn-transparent">Iniciar Sesión</a>
                 <a href="register.php" class="btn-transparent">Registrate</a>
+
+                <?php endif; ?>
+
             </div>
         </div>
     </header>
@@ -27,8 +59,33 @@ include "includes/templates/header.php";
         <div>
             <h3 class="center-text">¡Empezar ya!</h3>
             <div class="controls container">
-                <a href="login.php" class="btn-transparent">Iniciar Sesíon</a>
-                <a href="register.php" class="btn-transparent">Registrate</a>
+            <?php
+
+            if($auth && !$auth_admin):?>
+                
+            <a href="home.php" class="btn-transparent">Mis tareas</a>
+            <a href="/logout.php" class="btn-transparent">Cerrar sesión.</a>
+
+            <?php endif; ?>
+
+
+            <?php
+
+            if($auth && $auth_admin):?>
+                
+            <a href="admin/" class="btn-transparent">Administrar</a>
+            <a href="/logout.php" class="btn-transparent">Cerrar sesión.</a>
+
+            <?php endif; ?>
+
+            <?php
+
+            if(!$auth && !$auth_admin):?>
+
+            <a href="login.php" class="btn-transparent">Iniciar Sesión</a>
+            <a href="register.php" class="btn-transparent">Registrate</a>
+
+            <?php endif; ?>
             </div>
         </div>
     </section>
@@ -48,7 +105,7 @@ include "includes/templates/header.php";
 
     <section class="section-info background-pomodoro">
         <h3 class="center-text">¡Con Pomodoro!</h3>
-        <p class="container">Mide tus tiempos de trabajo y descanso</p>
+        <p class="">Mide tus tiempos de trabajo y descanso</p>
         <span class="span-giant">25:5</span>
     </section>
 
